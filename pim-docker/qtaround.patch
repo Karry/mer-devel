@@ -1,0 +1,22 @@
+diff --git a/src/util.cpp b/src/util.cpp
+index 5e5c1c4..be69953 100644
+--- a/src/util.cpp
++++ b/src/util.cpp
+@@ -11,6 +11,8 @@
+ #include <QString>
+ #include <QMap>
+ 
++#include <cmath>
++
+ namespace qtaround {
+ 
+ namespace error {
+@@ -75,7 +77,7 @@ double parseBytes(QString const &s, QString const &unit, long multiplier)
+         if (unit != "b" && unit != "B")
+             exp -= capacityUnitExponent(unit);
+ 
+-        res = res * pow(multiplier, exp);
++        res = res * std::pow(multiplier, exp);
+     }
+     if (!ok)
+         error::raise({{"msg", "Can't parse bytes"}, {"value", value}});

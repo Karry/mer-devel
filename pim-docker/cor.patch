@@ -1,0 +1,24 @@
+diff --git a/include/cor/util.hpp b/include/cor/util.hpp
+index 153c496..e9c79d9 100644
+--- a/include/cor/util.hpp
++++ b/include/cor/util.hpp
+@@ -11,6 +11,7 @@
+ #include <stack>
+ #include <sstream>
+ #include <memory>
++#include <functional>
+ 
+ #include <ctime>
+ 
+diff --git a/src/mt.cpp b/src/mt.cpp
+index 29809cd..2044466 100644
+--- a/src/mt.cpp
++++ b/src/mt.cpp
+@@ -1,6 +1,7 @@
+ #include <cor/util.hpp>
+ #include <cor/mt.hpp>
+ #include <deque>
++#include <functional>
+ 
+ namespace cor
+ {

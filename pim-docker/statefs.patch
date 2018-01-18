@@ -1,0 +1,13 @@
+diff --git a/examples/src/CMakeLists.txt b/examples/src/CMakeLists.txt
+index 7ad6aa8..c2eb9f8 100644
+--- a/examples/src/CMakeLists.txt
++++ b/examples/src/CMakeLists.txt
+@@ -8,6 +8,9 @@ target_link_libraries(example_power
+ install(TARGETS example_power DESTINATION ${DST_LIB}/statefs)
+ 
+ add_library(example_statefspp SHARED example_statefspp.cpp)
++target_link_libraries(example_statefspp
++  ${CMAKE_THREAD_LIBS_INIT}
++)
+ target_link_libraries(example_statefspp statefs-pp)
+ install(TARGETS example_statefspp DESTINATION ${DST_LIB}/statefs)

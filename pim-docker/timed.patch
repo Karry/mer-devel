@@ -1,0 +1,25 @@
+diff --git a/src/server/adaptor.h b/src/server/adaptor.h
+index d45613f..de58128 100644
+--- a/src/server/adaptor.h
++++ b/src/server/adaptor.h
+@@ -33,6 +33,7 @@
+ #include <QString>
+ #include <QDBusAbstractAdaptor>
+ #include <QDBusMessage>
++#include <QDateTime>
+ 
+ #include "../lib/event-io.h"
+ #include "../lib/wall-info.h"
+diff --git a/src/server/server.pro b/src/server/server.pro
+index 0d82af6..0ea5b25 100644
+--- a/src/server/server.pro
++++ b/src/server/server.pro
+@@ -87,7 +87,7 @@ SOURCES += notification.cpp
+ HEADERS += notification.h
+ 
+ CONFIG += link_pkgconfig
+-PKGCONFIG += libpcrecpp libsystemd-daemon
++PKGCONFIG += libpcrecpp libsystemd
+ equals(QT_MAJOR_VERSION, 4) {
+     CONFIG += iodata
+     PKGCONFIG += contextprovider-1.0
